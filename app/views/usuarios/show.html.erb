@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @usuario.nombre %>
+</p>
+
+<p>
+  <b>Edad:</b>
+  <%= @usuario.edad %>
+</p>
+
+<p>
+  <b>Msj:</b>
+  <%= @usuario.msj %>
+</p>
+
+<% if @usuario.foto.exists? then %>
+<p><b>Thumb:</b></p>
+<%= image_tag @usuario.foto.url(:thumb) %>
+<%= image_tag @usuario.foto.url(:medium) %>
+<% else %>
+<p> No existe foto. Por favor cargue una si desea.</p>
+<% end %>
+<br />
+
+<%= link_to 'Edit', edit_usuario_path(@usuario) %> |
+<%= link_to 'Back', usuarios_path %>

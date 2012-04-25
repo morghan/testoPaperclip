@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nombre: MyString
+  edad: 1
+  msj: MyText
+
+two:
+  nombre: MyString
+  edad: 1
+  msj: MyText
